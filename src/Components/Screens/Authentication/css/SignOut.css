@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.userPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+}
+.userPage .userBox {
+    width: 300px;
+    height: auto;
+    box-shadow: 0 0 8px 4px lightgrey;
+    background-color: rgb(245,245,255);
+}
+.userPage .userBox div {
+    margin: 10px;
+}
+.userPage .userBox .forUserPofile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.userPage .userBox .forUserPofile .userProfile {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    background-color: white;
+}
+.userPage .userBox .forUserPofile .userProfile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.userPage .userBox .forUserDetails {
+    display: flex;
+    align-items: center;
+}
+/* .userPage .userBox .forUserDetails .userDetails {
+} */
+.userPage .userBox .forUserDetails .userDetails div {
+    margin: 10px;
+}
+.userPage .userBox .forUserDetails .userDetails div span {
+    font-size: 22px;
+}
+.userPage .userBox .userOut {
+    /* width: 100%; */
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.userPage .userBox .userOut button {
+    height: 100%;
+    width: 40%;
+    background-color: skyblue;
+    border: 1px solid black;
+}

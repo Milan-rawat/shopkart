@@ -1,0 +1,249 @@
+/* @media only screen and (max-width: 500px) { */
+    input:focus,
+    button:focus {
+        outline: none;
+    }
+    header {
+        position: sticky;
+        top: -4rem;
+        width: 100%;
+        height: 7.5rem;
+        background-color: rgb(235, 245, 255);
+        box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ------------Upper Navigation bar----------- */
+    .upperNav {
+        display: flex;
+        width: 100%;
+        height: 4rem;
+        /* border-bottom: 1px solid grey; */
+    }
+
+        /* ---------------Burger Menu------------ */
+    .upperNav .burgerMenuBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18%;
+        height: 100%;
+    }
+    .upperNav .burgerMenuBox .burgerMenu {
+        border-radius: 4px;
+        border: 1px solid black;
+    }
+    .upperNav .burgerMenuBox .burgerMenu .fa-bars {
+        font-size: 5vw;
+        padding: 2vw;
+    }
+
+
+    /* ------------------Side Menu------------- */
+    .sideMenuBack {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    /* .sideMenuBack .closeMenuBtn {
+        width: auto;
+        height: auto;
+        border: 1px solid black;
+    } */
+    .sideMenuBack .closeMenuBtn .fa-times {
+        font-size: 2rem;
+        color: rgb(100, 200, 255);
+        padding: 25px;
+    }
+    .sideMenuClose {
+        overflow-y: scroll;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: whitesmoke;
+        z-index: 10;
+        transition: all ease-in-out 0.4s;
+        transform: translateX(-100%);
+    }
+    .sideMenuOpen {
+        overflow: auto;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        transition: all ease-in-out 0.4s;
+        transform: translateX(0);
+    }
+    .userProfileBox {
+        display: flex;
+        /* justify-content: center; */
+        align-items: bottom;
+        position: sticky;
+        top: 0;
+        padding: 10px;
+        width: 100%;
+        height: 70px;
+        background-color:whitesmoke;
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+    }
+    .userProfileBox .userDP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 100%;
+        box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.1);
+    }
+    .userProfileBox .userDP img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    .userProfileBox .userName {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .userProfileBox .userName #name {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .sideMenuLinkBox {
+        display: flex;
+        /* overflow-y: scroll; */
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+    .sideMenuLinkBox a {
+        padding: 10px;
+        width: 100%;
+        font-size: 18px;
+        color: black;
+    }
+    .sideMenuLinkBox a:hover {
+        background-color: lightgrey;
+        color: rgb(100, 200, 255);
+    }
+    .sideMenuLinkBox a .fa {
+        margin: 0 10px;
+    }
+
+
+
+    .upperNav .mainBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 82%;
+        height: 100%;
+    }
+    .upperNav .mainBox .logo #logo {
+        font-family: 'Sansita Swashed', cursive;
+        font-size: 10vw;
+    }
+    .upperNav .mainBox .menus {
+        display: flex;
+    }
+    .upperNav .mainBox .menus .fa {
+        color: rgb(100, 200, 255);
+        margin: 3vw;
+        font-size: 5vw;
+    }
+    .upperNav .mainBox .menus .fa:hover {
+        color: rgb(85, 170, 255);
+        margin: 2.5vw;
+        font-size: 6vw;
+    }
+
+    /* -------------upper Navigation bar end------------- */
+    /* -------------------------------------------------- */
+    /* -------------bottom navigation bar---------------- */
+    .bottomNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3.5rem;
+        border-bottom: 1px solid grey;
+    }
+    .bottomNav .BATAN {
+        z-index: 0;
+        height: 10vw;
+        width: 10vw;
+        top: 0;
+        margin: 10px 8px 10px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        /* border-radius: 4px; */
+        font-size: 6vw;
+        /* box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1); */
+        color: black;
+        transition: ease-out 0.3s;
+    }
+    .bottomNav .searchBarBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+        transition: ease-out 0.3s;
+    }
+    .bottomNav .searchBarBox .searchBar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85%;
+        height: 100%;
+        border-radius: 3px 0 0 3px;
+    }
+    .bottomNav .searchBarBox .searchBar input {
+        font-size: 5vw;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        border: none;
+        border-radius: 3px 0 0 3px;
+    }
+    .bottomNav .searchBarBox .searchIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        height: 100%;
+        border-radius: 0 2px 2px 0;
+    }
+    /* .bottomNav .searchBarBox .searchIcon Link {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    } */
+    .bottomNav .searchBarBox .searchIcon button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0 3px 3px 0;
+        background-color: rgb(100, 200, 255);
+    }
+    .bottomNav .searchBarBox .searchIcon button .fa-search {
+        color: black;
+        font-size: 5.5vw;
+    }
