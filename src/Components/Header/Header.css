@@ -135,7 +135,7 @@
         background-color: lightgrey;
         color: rgb(100, 200, 255);
     }
-    .sideMenuLinkBox a .fa {
+    .sideMenuLinkBox .fa {
         margin: 0 10px;
     }
 

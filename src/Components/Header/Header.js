@@ -85,13 +85,13 @@ class Header extends React.Component {
                             </div>
                         </div>
                         <div className="sideMenuLinkBox">
-							    <a href="/"><i className="fa fa-home" />Home</a>
-							    <a href="/user/signin"><i className="fa fa-user" />Account</a>
-							    <a href="1"><i className="fa fa-cog" />Setting</a>
-							    <a href="2"><i className="fa fa-list" />WishList</a>
-							    <a href="3"><i className="fa fa-car" />Cars</a>
-							    <a href="4"><i className="fa fa-users" />About us</a>
-							    <a href="5"><i className="fa fa-phone" />Contact us</a>
+							    <Link to="/"><span><i className="fa fa-home" />Home</span></Link>
+							    <Link to="/user/signin"><span><i className="fa fa-user" />Account</span></Link>
+							    <Link to="1"><span><i className="fa fa-cog" />Setting</span></Link>
+							    <Link to="2"><span><i className="fa fa-list" />WishList</span></Link>
+							    <Link to="3"><span><i className="fa fa-car" />Cars</span></Link>
+							    <Link to="4"><span><i className="fa fa-users" />About us</span></Link>
+							    <Link to="5"><span><i className="fa fa-phone" />Contact us</span></Link>
                         </div>
                     </div>
                     <div className="closeMenuBtn" onClick={this.sideMenuToggle}>
@@ -113,10 +113,10 @@ class Header extends React.Component {
                             </div>
                             <div className="menus">
                                 <div className="userSell">
-                                    <a href="/user/sell"><i className="fa fa-plus" /></a>
+                                    <Link to="/user/sell"><i className="fa fa-plus" /></Link>
                                 </div>
                                 <div className="userLog">
-                                    <a href="/user/signin"><i className="fa fa-user" /></a>
+                                    <Link to="/user/signin"><i className="fa fa-user" /></Link>
                                 </div>
                                 <div className="userChat">
                                     <i className=" fa fa-comment"></i>

@@ -1,9 +1,18 @@
 const express = require('express');
 const mongoose =  require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
 const fs = require('fs');
 const app = express();
 
+
+
+app.use(express.static(path.join(__dirname, 'build')))
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 
 // var MongoClient = require('mongodb').MongoClient;
@@ -382,6 +391,6 @@ app.use('/api/user/mainSearch', (req, res) => {
 });
 
 
-app.listen(5001, function() {
-    console.log("Server listening at port 5001");
+app.listen(80, function() {
+    console.log("Server listening at port 80");
 })
