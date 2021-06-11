@@ -16,7 +16,6 @@ class Body extends React.PureComponent {
   }
   gettingDetail = (item) => {
     localStorage.setItem("itemDetails", JSON.stringify(item));
-    console.log("item details saved");
   };
   categorySearched = async (ctg) => {
     const response = await fetch("/api/user/ctgSearched", {

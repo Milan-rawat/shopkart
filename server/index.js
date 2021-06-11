@@ -149,11 +149,9 @@ app.post("/api/user/signup", (req, res) => {
       sell: newUser.sell,
       isLoggedIn: true,
     };
-    console.log(userResponse);
     res.send(userResponse);
     res.end();
   });
-  console.log(User);
 });
 
 //----------------User Signin-------------------------------
@@ -255,7 +253,6 @@ app.use("/api/user/productsale", (req, res, next) => {
 
   fs.writeFile("../public/assets/products/" + productImageName, buf, (err) => {
     if (err) throw err;
-    console.log("File written");
   });
   // res.end();
 
@@ -272,8 +269,6 @@ app.use("/api/user/productsale", (req, res, next) => {
       }
     }
   );
-
-  console.log(newProduct);
 });
 app.use("/api/user/productsale", (req, res) => {
   User.findOne({ _id: req.body._id }, function (err, data) {
@@ -291,7 +286,6 @@ app.use("/api/user/productsale", (req, res) => {
         sell: data.sell,
         prdadded: "ok",
       };
-      console.log(userResponse);
       res.send(userResponse);
       res.end();
     }
@@ -316,9 +310,8 @@ app.use("/api/user/ctgSearched", (req, res) => {
       const products = [];
 
       // console.log(searchResponse);
-      console.log(req.body.prd);
       for (let i = 0; i < data.length; i++) {
-        // console.log(data[i].firstName)
+        // (data[i].firstName)
         for (let j = 0; j < data[i].sell.length; j++) {
           if (data[i].sell[j].productCategory === req.body.ctgprd) {
             const tempObj = data[i].sell[j];
@@ -329,14 +322,12 @@ app.use("/api/user/ctgSearched", (req, res) => {
         }
       }
       const newresponse = products.filter(function (item, pos, self) {
-        return self.indexOf(item) == pos;
+        return self.indexOf(item) === pos;
       });
       res.send(newresponse);
-      console.log(newresponse);
       res.end();
     }
   });
-  console.log(req.body);
 });
 
 app.use("/api/user/mainSearch", (req, res) => {
@@ -348,7 +339,7 @@ app.use("/api/user/mainSearch", (req, res) => {
     } else {
       const products = [];
       const splitkeys = req.body.searchedKey.split(" ");
-      console.log(splitkeys);
+      splitkeys;
       for (let i = 0; i < data.length; i++) {
         for (let j = 0; j < data[i].sell.length; j++) {
           for (let k = 0; k < splitkeys.length; k++) {
@@ -380,12 +371,10 @@ app.use("/api/user/mainSearch", (req, res) => {
       const newresponse = products.filter(function (item, pos, self) {
         return self.indexOf(item) == pos;
       });
-      console.log(newresponse);
       res.send({ data: newresponse, status: "ok" });
       res.end();
     }
   });
-  console.log(req.body);
 });
 
 app.listen(8000, function () {
