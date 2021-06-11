@@ -339,7 +339,6 @@ app.use("/api/user/mainSearch", (req, res) => {
     } else {
       const products = [];
       const splitkeys = req.body.searchedKey.split(" ");
-      splitkeys;
       for (let i = 0; i < data.length; i++) {
         for (let j = 0; j < data[i].sell.length; j++) {
           for (let k = 0; k < splitkeys.length; k++) {
